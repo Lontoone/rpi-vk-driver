@@ -1,3 +1,5 @@
+#define _GNU_SOURCE
+#include <string.h>
 /*
  * Copyright © 2016 Intel Corporation
  * Copyright © 2017 Broadcom

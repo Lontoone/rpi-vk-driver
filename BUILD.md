@@ -13,7 +13,8 @@ The Vulkan-Loader version distributed with Raspbian (1.1.97-2) does not support 
     git clone https://github.com/Yours3lf/rpi-vk-driver.git
     cd rpi-vk-driver
     mkdir build && cd build
-    cmake ..
+    mkdir build && cd build
+    cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_FLAGS="-D_GNU_SOURCE -Wno-error=implicit-function-declaration -Wno-error=int-conversion -Wno-error=incompatible-pointer-types" -Dpython=$(which python)
     make
     sudo make install
 

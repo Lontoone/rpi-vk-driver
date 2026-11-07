@@ -6,6 +6,10 @@
 #include <pthread.h>
 #include <semaphore.h>
 
+// alocate memory here for compile correctness
+// This is not safe and clear 
+modeset_saved_state modeset_saved_states[32];
+
 typedef struct vsyncData
 {
 	_image* i;
